@@ -11,19 +11,23 @@ addons:
   postgresql: "12"
 
 before_script:
+  - apt-get install postgresql-12
   - psql -c "create database jpa;" -U postgres
-  - sudo -u postgres psql -c "ALTER ROLE postgres WITH password 'admin'" // if your password is different from 'postgres` use that one here
+  - sudo -u postgres psql -c "ALTER ROLE postgres WITH password 'admin'"
 
 services:
   - postgresql
 
 before_install:
   - chmod +x mvnw
+
 script:
   - ./mvnw clean install -DskipTests=false -B
+
 deploy:
  provider: heroku
  api-key: 
   secure: $HEROKU_API_KEY
  app: clinical-center-psw-isa
+
 dist: trusty
