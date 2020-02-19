@@ -11,7 +11,7 @@ addons:
   postgresql: "12"
 
 before_script:
-  - apt-get install postgresql-12
+  - sudo apt-get install postgresql-12
   - psql -c "create database jpa;" -U postgres
   - sudo -u postgres psql -c "ALTER ROLE postgres WITH password 'admin'"
 
