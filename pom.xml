@@ -11,7 +11,7 @@
 	<groupId>isaps.tim18</groupId>
 	<artifactId>PSW_ISA_ClinicalC_2019</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>PSW_ISA_ClinicalC_2019</name>
 	<description>Clinical Center Web App - Spring Boot, REST, Angular, Postgre</description>
 
